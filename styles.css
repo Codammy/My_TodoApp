@@ -1,0 +1,240 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.handy{
+    animation: point 1s linear infinite;
+}
+@keyframes point {
+    0%{
+        margin: 0;
+    }
+    25%{
+        margin: 5px;
+    }
+    50%{
+        margin: 10px;
+    }
+    75%{
+        margin: 15px;
+    }
+    100%{
+        margin: 20px;
+    }
+}
+body{
+    height: 100vh;
+    background-color: aquamarine;
+    overflow-y: hidden;
+}
+.time_div{
+    width: 50%;
+    height: fit-content;
+    background-color: blue;
+    position: fixed;
+    border-radius: 12px;
+    transition: 5s;
+}
+.time_div #justify_time{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.time_div #justify_time .exit:hover{transition: 1s; margin: 20px; cursor: pointer;} 
+.time_div #justify_time .con_day{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.time_div #justify_time select{
+    width: 50%;
+    height: 36px;
+    border-radius: 3px;
+}
+.time_div #justify_time select option{
+    font-size: 20px;
+}
+.time_div #justify_time .con_input{
+    display: flex;
+    justify-content: center;
+}
+.time_div #justify_time .c_time{
+    width: 20%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 10px;
+    justify-content: center;
+}
+.time_div #justify_time .c_time input{width: 100%;}
+.time_div #justify_time input{
+    text-transform: uppercase;
+    font-size: 12px;
+    text-align: center;
+    width: 27%;
+    height: 40px;
+    border-radius: 5px;
+}
+.time_div #justify_time .set{
+    margin: 15px;
+    text-align: center;
+    margin-top: 25px;
+    width: 60px;
+    height: 30px;
+    background-color: rgb(175, 225, 106);
+}
+.time_div #justify_time .set:hover{cursor: pointer;}
+section{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header{
+    font-size: 25px;
+    margin: 10px;
+    color: crimson;
+    font-family: segoe-script, segoe print;
+}
+.contain{
+    width: 80%;
+    height: 80vh;
+    background-color: rgb(21, 59, 185);
+    border-radius: 15px;
+}
+main{
+    margin-top: 25px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.contain_input{
+    display: flex;
+    justify-content: center;
+    height: fit-content;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    width: 100%;
+}
+input{
+    border: none;
+    border-radius: 20px;
+    padding:15px;
+    width: 70%;
+    font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgba(0, 0, 0, 0.767);
+}
+input:focus{
+    outline: 3px solid rgb(105, 105, 182);
+}
+.circle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    margin-left: 11px;
+}
+.red{
+    background-color: crimson;
+}
+.red:hover{
+    cursor: pointer;
+}
+.green{
+    margin: 7px 0 0 17px;
+    color: white;
+    background-color: rgb(2, 255, 2);
+}
+.green:hover{
+    cursor: alias;
+}
+.set_time{
+    display: flex;
+    width: 71%;
+    justify-content: space-between;
+    color: greenyellow;
+}
+.remove_todo{
+    width: 58%;
+    height: 2px;
+    background-color: white;
+}
+.contain_todos{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: fit-content;
+    margin: 15px;
+    width: 75%;
+}
+.todos{
+    padding: 18px;
+    background-color: wheat;
+    width: 70%;
+    border-radius: 20px;
+}
+.completed_todo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 7vh;
+    font: 1em sans-serif;
+    width: 20%;
+    color: white;
+    border-radius: 25px;
+    font-size: small;
+    background-color: green;
+}
+button{
+    border: none;
+}
+.completed{
+    font-size: 12px;
+    text-decoration: line-through;
+    opacity: 0.7;
+    font-style: italic;
+}
+.completed_todo:hover{
+    cursor: alias;
+}
+.plus1{
+    position: fixed;
+    color: blue;
+    text-decoration: underline;
+    bottom: 25px;
+    right: 40px;
+}
+
+/* media query*/
+@media (max-width:800px) {
+    .contain_todos{
+    width: 85%;
+}
+.completed_todo{
+    display: flex;
+    justify-content: center;
+    border-radius: 50%;
+}
+}
+@media (max-width: 400px) {
+    body{
+        overflow-y: scroll;
+    }
+    .contain{
+        height: auto;
+    }
+    .contain_input{
+        width: 90%;
+    }
+    .plus1{
+        right: 5px;
+    }
+}
